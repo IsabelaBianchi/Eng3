@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<!-- Database connection settings -->
+		<!-- SQL dialect -->
+		<property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property >
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/programa?useTimezone=true&amp;serverTimezone=UTC</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">admin</property>
+		
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+	
+
+		<!-- Mapeamento das entidades -->
+		<mapping class="programa.entity.Usuario" />
+		<mapping class="programa.entity.Cliente" />
+		<mapping class="programa.entity.Os" />
+		<mapping class="programa.entity.Produto" />
+		<mapping class="programa.entity.Fornecedor" />
+		<mapping class="programa.entity.MateriaPrima" />
+		<mapping class="programa.entity.Caixa" />
+		<mapping class="programa.entity.Funcionario" />
+	</session-factory>
+
+</hibernate-configuration>

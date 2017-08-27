@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="350.0" maxWidth="350.0" minHeight="350.0" minWidth="350.0" prefHeight="350.0" prefWidth="350.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="programa.controller.LoginController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label fx:id="lblTitulo" layoutX="154.0" layoutY="10.0" prefHeight="22.0" prefWidth="76.0" text="Login" wrapText="false">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Label>
+    <Label fx:id="lblUsuario" layoutX="154.0" layoutY="182.0" text="Usuário">
+      <font>
+        <Font size="14.0" fx:id="x1" />
+      </font>
+    </Label>
+    <TextField fx:id="tfUsuario" layoutX="116.0" layoutY="206.0" prefWidth="123.0" />
+    <Label id="lblUsuario" fx:id="lblSenha" font="$x1" layoutX="159.0" layoutY="238.0" text="Senha" />
+    <PasswordField fx:id="pfSenha" layoutX="116.0" layoutY="264.0" prefWidth="123.0" />
+    <Button fx:id="btnEntrar" layoutX="151.0" layoutY="307.0" mnemonicParsing="false" onAction="#entrar" prefHeight="22.0001220703125" text="Entrar" />
+    <ImageView fx:id="ivLogo" fitHeight="150.0" fitWidth="200.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" x="100.0" y="0.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="84.0">
+      <image>
+        <Image url="@../imagens/baker.png" />
+      </image>
+    </ImageView>
+  </children>
+  <rotationAxis>
+    <Point3D />
+  </rotationAxis>
+  <stylesheets>
+    <URL value="@../css/login.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="programa.controller.ListaOsController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label fx:id="lblTitulo" layoutX="342.0" layoutY="9.0" text="Encomendas" />
+    <ChoiceBox fx:id="cbDia" layoutX="174.0" layoutY="148.0" prefWidth="51.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="14.0" layoutY="30.0" text="Selecione os filtros para a pesquisa:" />
+    <Label layoutX="174.0" layoutY="124.0" text="Dia" />
+    <ChoiceBox fx:id="cbMes" layoutX="241.0" layoutY="148.0" prefWidth="51.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="241.0" layoutY="124.0" text="Mes" />
+    <ChoiceBox fx:id="cbAno" layoutX="305.0" layoutY="148.0" prefWidth="55.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="311.0" layoutY="127.0" text="Ano" />
+    <Button fx:id="btnBuscar" layoutX="383.0" layoutY="146.0" mnemonicParsing="false" onAction="#buscar" text="Buscar" />
+    <Button fx:id="btnTodas" layoutX="493.0" layoutY="122.0" mnemonicParsing="false" onAction="#todas" text="Listar todas" />
+    <Separator layoutX="421.0" layoutY="87.0" orientation="VERTICAL" prefHeight="21.0" />
+    <TableView fx:id="tvTabela" layoutX="14.0" layoutY="231.0" onMouseClicked="#clicou" prefHeight="234.0" prefWidth="772.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="53.0" text="Id" fx:id="tcId" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="108.0" text="Cliente" fx:id="tcCliente" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="154.0" text="Assunto" fx:id="tcAssunto" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="152.0" text="Data Criação" fx:id="tcData" />
+        <TableColumn prefWidth="75.0" text="Valor" fx:id="tcValor" />
+        <TableColumn prefWidth="75.0" text="Situação" fx:id="tcSituacao" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="153.0" text="Data Entrega" fx:id="tcDataEnt" />
+      </columns>
+    </TableView>
+    <Button fx:id="btnEditar" layoutX="18.0" layoutY="485.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+    <Button fx:id="btnSair" layoutX="746.0" layoutY="485.0" mnemonicParsing="false" onAction="#sair" text="Sair">
+      <stylesheets>
+        <URL value="@../css/listaOs.css" />
+      </stylesheets>
+    </Button>
+    <Button id="Excluir" fx:id="btnExcluir" layoutX="76.0" layoutY="485.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+    <Label layoutX="13.0" layoutY="195.0" text="Buscar por nome do cliente" />
+    <TextField fx:id="tfCliente" layoutX="172.0" layoutY="195.0" prefWidth="186.0" />
+    <Button fx:id="btnBuscarCliente" layoutX="382.0" layoutY="193.0" mnemonicParsing="false" onAction="#buscarCliente" text="Buscar" />
+    <Label layoutX="14.0" layoutY="148.0" prefWidth="146.0" text="Busca por Data de Criação" />
+    <Label layoutX="18.0" layoutY="82.0" prefWidth="146.0" text="Busca por Data de Entrega" />
+    <Label layoutX="174.0" layoutY="61.0" text="Dia" />
+    <ChoiceBox fx:id="cbDiaEnt" layoutX="174.0" layoutY="82.0" prefWidth="51.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="cbMesEnt" layoutX="241.0" layoutY="80.0" prefWidth="51.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <ChoiceBox fx:id="cbAnoEnt" layoutX="307.0" layoutY="80.0" prefWidth="51.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Label layoutX="241.0" layoutY="61.0" text="Mes" />
+    <Label layoutX="311.0" layoutY="58.0" text="Ano" />
+    <Button id="btnBuscar" fx:id="btnBuscarEnt" layoutX="382.0" layoutY="82.0" mnemonicParsing="false" onAction="#buscarEnt" text="Buscar" />
+    <Separator layoutX="471.0" layoutY="53.0" orientation="VERTICAL" prefHeight="156.0" />
+  </children>
+  <stylesheets>
+    <URL value="@../css/listaOs.css" />
+  </stylesheets>
+</AnchorPane>

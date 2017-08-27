@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="310.0" prefWidth="328.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="programa.controller.EditaFornecedorController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane layoutX="0.0" layoutY="1.0" prefHeight="308.0" prefWidth="328.0">
+      <children>
+        <Label fx:id="lblTitulo" layoutX="94.0" layoutY="14.0" text="Editando Fornecedor" />
+        <Label fx:id="lblNome" layoutX="14.0" layoutY="60.0" text="Nome" />
+        <TextField fx:id="tfNome" layoutX="85.0" layoutY="60.0" prefWidth="200.0" promptText="Nome" /> 
+        <Label fx:id="lblTelefone" layoutX="14.0" layoutY="143.0" text="Telefone" />
+        <TextField fx:id="tfTelefone" layoutX="85.0" layoutY="143.0" prefWidth="200.0" promptText="Telefone" />
+        <Button fx:id="btnSalvar" layoutX="193.0" layoutY="272.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+        <Button fx:id="btnCancelar" layoutX="252.0" layoutY="272.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+      </children>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@../css/cadastrarCliente.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="545.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="programa.controller.EditaOsController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane layoutX="0.0" layoutY="-1.0" prefHeight="546.0" prefWidth="705.0">
+      <children>
+        <Label fx:id="lblTitulo" layoutX="290.0" layoutY="14.0" text="Editar Os" />
+        <Label fx:id="lblIdOs" layoutX="14.0" layoutY="57.0" text="Nº Os" />
+        <TextField fx:id="tfIdOs" editable="false" layoutX="51.0" layoutY="57.0" prefWidth="52.0" />
+        <Label fx:id="lblCliente" layoutX="120.0" layoutY="57.0" text="Cliente" />
+        <Label fx:id="lblHora" layoutX="360.0" layoutY="57.0" prefWidth="127.0" text="Data de Criação" />
+        <TextField id="tfHora" fx:id="tfData" layoutX="451.0" layoutY="54.0" prefWidth="73.0" />
+        <Label fx:id="lblAssunto" layoutX="14.0" layoutY="137.0" text="Endereço de Entrega" />
+        <TextField fx:id="tfAssunto" layoutX="139.0" layoutY="134.0" prefWidth="200.0" />
+        <Label fx:id="lblSituacao" layoutX="14.0" layoutY="100.0" text="Situaçao" />
+        <ChoiceBox fx:id="cbSituacao" layoutX="69.0" layoutY="98.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <Label layoutX="30.0" layoutY="422.0" text="Descriçao" />
+        <TextArea fx:id="taDescricao" layoutX="98.0" layoutY="406.0" prefHeight="47.998046875" prefWidth="254.99997792968497" wrapText="true" />
+        <Button fx:id="btnSalvar" layoutX="500.0" layoutY="471.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+        <Button fx:id="btnCancelar" layoutX="574.0" layoutY="471.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+        <TextField fx:id="tfCliente" layoutX="165.0" layoutY="54.0" prefWidth="173.0" />
+        <Label fx:id="lblDataEntrega" layoutX="183.0" layoutY="98.0" text="Data Entrega" />
+        <TableView id="tvProdutos" fx:id="tvTabelaProduto" layoutX="89.0" layoutY="215.0" prefHeight="125.0" prefWidth="500.0">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="77.0" text="Id" fx:id="tcId" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="123.0" text="Produto" fx:id="tcProduto" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="151.0" text="Quantidade" fx:id="tcQuantidade" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="150.0" text="Valor unitário" fx:id="tcValor" />
+          </columns>
+        </TableView>
+        <Label id="lblTotal" layoutX="487.0" layoutY="351.0" text="Valor Total:" />
+        <ChoiceBox fx:id="cbDia" layoutX="260.0" layoutY="98.0" maxWidth="100.0" minWidth="28.0" prefWidth="37.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <ChoiceBox fx:id="cbMes" layoutX="309.0" layoutY="98.0" prefWidth="37.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <ChoiceBox fx:id="cbAno" layoutX="360.0" layoutY="98.0" prefWidth="37.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <Label fx:id="lblTotal" layoutX="560.0" layoutY="351.0" text="Label" />
+        <Separator layoutX="0.0" layoutY="193.0" prefWidth="700.0" />
+        <Separator layoutX="-1.0" layoutY="390.0" prefHeight="15.9609375" prefWidth="700.0" />
+        <Label layoutX="69.0" layoutY="374.0" prefWidth="554.0" text="Atenção : Valor da OS já computado. Alterações de produtos/valor adicionar no caixa e na descrição" textFill="#606060" />
+      </children>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@../css/os.css" />
+  </stylesheets>
+</AnchorPane>

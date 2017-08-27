@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="312.0" prefWidth="484.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="programa.controller.CadastrarCaixaController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="312.0" prefWidth="484.0">
+      <children>
+        <Button fx:id="btnSalvar" layoutX="329.0" layoutY="261.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+        <Button fx:id="btnCancelar" layoutX="404.0" layoutY="261.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+        <RadioButton fx:id="radEnt" layoutX="31.0" layoutY="212.0" mnemonicParsing="false" text="Entrada" />
+        <RadioButton fx:id="radSai" layoutX="125.0" layoutY="212.0" mnemonicParsing="false" text="Saída" />
+        <TextField id="tfDescrição" fx:id="tfDescricao" layoutX="98.0" layoutY="71.0" prefWidth="200.0" promptText="Descricao" />
+        <TextField fx:id="tfValor" layoutX="98.0" layoutY="122.0" prefWidth="200.0" promptText="Valor" />
+        <TextField fx:id="tfData" layoutX="98.0" layoutY="168.0" prefWidth="200.0" promptText="Data" />
+        <Label layoutX="31.0" layoutY="71.0" text="Descrição" />
+        <Label layoutX="31.0" layoutY="125.0" text="Valor" />
+        <Label layoutX="31.0" layoutY="171.0" text="Data" />
+        <Label layoutX="200.0" layoutY="14.0" text="Nova Transação" />
+      </children>
+    </Pane>
+  </children>
+   <stylesheets>
+    <URL value="@../css/cadastrarCliente.css" />
+  </stylesheets>
+</AnchorPane>

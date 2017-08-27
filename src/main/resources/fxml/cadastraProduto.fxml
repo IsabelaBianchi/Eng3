@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="416.0" prefWidth="496.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="programa.controller.CadastrarProdutoController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane id="pPainel" layoutX="0.0" layoutY="-4.0" prefHeight="416.0" prefWidth="496.0">
+      <children>
+        <TextField fx:id="tfNomeProduto" layoutX="110.0" layoutY="67.0" prefWidth="200.0" promptText="Nome" />
+        <TextField fx:id="tfPrecoProduto" layoutX="110.0" layoutY="120.0" prefWidth="200.0" promptText="Preço(Unidade ou Kg)" />
+        <Label id="lnlNomeProduto" fx:id="lblNomeProduto" layoutX="14.0" layoutY="70.0" text="Nome" />
+        <Label fx:id="lblPrecoProduto" layoutX="14.0" layoutY="114.0" prefHeight="32.9609375" prefWidth="119.0" text="Preço" />
+        <Button fx:id="btnSalvar" layoutX="293.0" layoutY="347.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+        <Button fx:id="btnCancelar" layoutX="366.0" layoutY="347.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+        <TableView fx:id="tvMateria" layoutX="84.0" layoutY="208.0" prefHeight="106.0" prefWidth="328.0">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="327.0" text="Materia-Prima" fx:id="tcMateriaPrima" />
+          </columns>
+        </TableView>
+        <ChoiceBox fx:id="cbMateria" layoutX="110.0" layoutY="162.0" prefWidth="200.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <Button fx:id="btnAdiciona" layoutX="328.0" layoutY="162.0" mnemonicParsing="false" onAction="#adicionar" text="Adiciona" />
+        <Label layoutX="14.0" layoutY="164.0" text="Matéria-Prima" />
+        <Label layoutX="210.0" layoutY="14.0" prefWidth="76.00009999999747" text="Novo Produto" />
+      </children>
+      <effect>
+        <ColorAdjust>
+          <input>
+            <DisplacementMap>
+              <mapData>
+                <FloatMap />
+              </mapData>
+            </DisplacementMap>
+          </input>
+        </ColorAdjust>
+      </effect>
+      <stylesheets>
+        <URL value="@../css/cadastraProduto.css" />
+      </stylesheets>
+    </Pane>
+  </children>
+</AnchorPane>

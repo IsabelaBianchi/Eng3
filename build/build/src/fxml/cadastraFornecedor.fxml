@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="programa.controller.CadastrarFornecedorController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane id="pPainel" layoutX="0.0" layoutY="0.0" prefHeight="312.0" prefWidth="400.0">
+      <children>
+        <TextField fx:id="tfNomeFornec" layoutX="74.0" layoutY="56.0" prefWidth="200.0" promptText="Nome" />
+        <TextField fx:id="tfFoneFornec" layoutX="74.0" layoutY="108.0" prefWidth="200.0" promptText="Telefone" />
+        <Button fx:id="btnSalvar" layoutX="174.0" layoutY="190.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+        <Button fx:id="btnCancelar" layoutX="241.0" layoutY="190.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+        <Label layoutX="145.0" layoutY="16.0" prefHeight="20.960845947265625" text="Cadastro Fornecedor" />
+        <Label layoutX="21.0" layoutY="59.0" text="Empresa" />
+        <Label layoutX="21.0" layoutY="111.0" text="Telefone" />
+      </children>
+      <stylesheets>
+        <URL value="@../css/cadastraProduto.css" />
+      </stylesheets>
+    </Pane>
+  </children>
+</AnchorPane>

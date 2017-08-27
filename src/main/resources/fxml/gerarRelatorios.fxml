@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="436.0" prefWidth="458.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="programa.controller.GerarRelatorioController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Pane layoutX="0.0" layoutY="2.0" prefHeight="435.0" prefWidth="472.0">
+      <children>
+        <Label layoutX="27.0" layoutY="25.0" prefHeight="71.9609375" text="Encomendas - nº de encomendas por mes/ano" />
+        <TextField fx:id="tfMes" layoutX="27.0" layoutY="75.0" prefWidth="61.0" promptText="mes(mm)" />
+        <TextField fx:id="tfAno" layoutX="104.0" layoutY="75.0" prefWidth="73.0" promptText="ano(aaaa)" />
+        <Button fx:id="btnPeriodo" layoutX="24.0" layoutY="114.0" mnemonicParsing="false" onAction="#periodo" text="Gerar" />
+        <Separator layoutX="4.0" layoutY="149.0" minHeight="1.0" prefHeight="1.0" prefWidth="454.0" />
+        <Label layoutX="27.0" layoutY="158.0" text="Clientes - 5 clientes com mais encomendas" />
+        <Button fx:id="btnCliente" layoutX="27.0" layoutY="184.0" mnemonicParsing="false" onAction="#clientes" text="Gerar" />
+        <Separator layoutX="4.0" layoutY="218.0" prefWidth="454.0" />
+        <Button fx:id="btnGerar" layoutX="328.0" layoutY="383.0" mnemonicParsing="false" onAction="#gerar" text="Gerar Arquivo" />
+        <Label layoutX="27.0" layoutY="232.0" text="Resultado:" />
+        <Label layoutX="210.0" layoutY="11.0" text="Relatórios" />
+        <Separator layoutX="4.0" layoutY="51.0" prefWidth="454.0" />
+      </children>
+    </Pane>
+    <TextArea fx:id="taTexto" layoutX="27.0" layoutY="269.0" prefHeight="104.0" prefWidth="397.0" wrapText="true" />
+  </children>
+  <stylesheets>
+    <URL value="@../css/cadastrarCliente.css" />
+  </stylesheets>
+</AnchorPane>

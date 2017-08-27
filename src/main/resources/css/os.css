@@ -1,0 +1,14 @@
+.root{
+	-fx-background-color:  rgb(255,255,255) ;
+	
+}
+
+.choice-box-popup{
+    -fx-pref-height: 100;
+}
+
+#cbNomeCliente .list-view .list-cell{
+
+-fx-cell-size: 15;
+
+}
